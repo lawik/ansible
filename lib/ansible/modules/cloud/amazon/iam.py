@@ -53,7 +53,7 @@ options:
     version_added: "2.2"
   access_key_state:
     description:
-      - When type is user, it creates, removes, deactivates or activates a user's access key(s). Note that actions apply only to keys specified.
+      - When iam_type is user, it creates, removes, deactivates or activates a user's access key(s). Note that actions apply only to keys specified.
     choices: [ "create", "remove", "active", "inactive"]
   key_count:
     description:
@@ -67,7 +67,7 @@ options:
       - A list of groups the user should belong to. When update, will gracefully remove groups not listed.
   password:
     description:
-      - When type is user and state is present, define the users login password. Also works with update. Note that always returns changed.
+      - When iam_type is user and state is present, define the users login password. Also works with update. Note that always returns changed.
   update_password:
     default: always
     choices: ['always', 'on_create']
